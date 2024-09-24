@@ -27,7 +27,7 @@ jobs:
           ./gradlew generateCucumberReport
           mkdir -p cucumber-reports
           cp -r build/cucumber-reports/html/overview-features.html cucumber-reports/
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3  # Cambia v2 por v3
         with:
           name: cucumber-reports
           path: cucumber-reports
